@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         // result_Message variable holds the data to update score
         EditText nameField =  (EditText) findViewById(R.id.Name);
         String store_Name = nameField.getText().toString();
-        option_Checker();
+        option_Checker();//this function will check checkboxes
         result_Message = store_Name + result_Message + score_Keeper;
         Context context = getApplicationContext();
         CharSequence text = result_Message;
