@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.myquiz.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:hint="NAME"
+        android:inputType="textCapWords"/>
+    <TextView
+         style="@style/Basic_att"
+         android:text="Q: Which age is ideal for starting gym ?"
+         android:textSize="22sp"/>
+        <RelativeLayout
+            android:layout_height="74dp"
+            android:layout_width="match_parent"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp">
+            <CheckBox
+                android:id="@+id/Q1_18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18"
+                android:textSize="22sp"
+                android:paddingLeft="22dp"/>
+            <CheckBox
+                android:id="@+id/Q1_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="16"
+                android:textSize="22sp"
+                android:paddingLeft="22dp"/>
+            <CheckBox
+                android:id="@+id/Q1_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="20"
+                android:textSize="22sp"
+                android:paddingLeft="22dp"/>
+            <CheckBox
+                android:id="@+id/Q1_22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:text="22"
+                android:textSize="22sp"
+                android:paddingLeft="22dp"/>
+        </RelativeLayout>
+        <TextView
+            style="@style/Basic_att"
+            android:text="Q: Which bodybuilder is has won olympia most of the times ?"
+            android:textSize="22sp"
+            android:layout_marginTop="24dp"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="24dp">
+            <RadioButton android:id="@+id/radio_Lee_Haney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="lee Haney"
+                android:paddingLeft="24dp"
+                android:textSize="22sp"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/radio_arnold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Arnold"
+                android:paddingLeft="24dp"
+                android:textSize="22sp"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/radio_Phil_Heath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phil Heath"
+                android:paddingLeft="24dp"
+                android:textSize="22sp"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/radio_Ronnie_Coleman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ronnie Coleman"
+                android:paddingLeft="24dp"
+                android:textSize="22sp"
+                android:onClick="onRadioButtonClicked"/>
+
+
+        </RadioGroup>
+        <TextView
+            style="@style/Basic_att"
+            android:text="Q: Who is famous for HIT type of training ?"
+            android:textSize="24sp"
+            android:layout_marginTop="24dp"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="24dp">
+            <RadioButton android:id="@+id/radio2_Sergi_Constance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sergi Constance"
+                android:paddingLeft="24dp"
+                android:textSize="22sp"
+                android:onClick="onRadioButtonClicked2"/>
+            <RadioButton android:id="@+id/radio2_Jeff_Saeid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jeff Saeid"
+                android:paddingLeft="24dp"
+                android:textSize="22sp"
+                android:onClick="onRadioButtonClicked2"/>
+            <RadioButton android:id="@+id/radio2_Dorian_Yates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dorian Yates"
+                android:paddingLeft="24dp"
+                android:textSize="22sp"
+                android:onClick="onRadioButtonClicked2"/>
+            <RadioButton android:id="@+id/radio2_Ronnie_Coleman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ronnie Coleman"
+                android:paddingLeft="24dp"
+                android:textSize="22sp"
+                android:onClick="onRadioButtonClicked2"/>
+        </RadioGroup>
+        <TextView
+            style="@style/Basic_att"
+            android:text="Q: what do you know about FST-7 training style ?"
+            android:textSize="24dp"
+            android:layout_marginTop="24dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:inputType="textCapSentences"/>
+        <Button
+           style="@style/Basic_att"
+            android:text="SUBMIT"
+            android:onClick="checker"/>
+        <TextView
+            style="@style/Basic_att"
+            android:text="Result"
+            android:textSize="24sp" />
+        <TextView
+            style="@style/Basic_att"
+            android:id="@+id/Result_show"
+            android:text="Your Score"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+</ScrollView>
