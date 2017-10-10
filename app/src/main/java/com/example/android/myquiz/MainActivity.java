@@ -22,18 +22,26 @@ public class MainActivity extends AppCompatActivity {
     // this method is called when submit button is clicked
     public void checker(View view){
         String result_Message = " your score is ";
+        String Ques4Answer = "Hany Rambod";
         // result_Message variable holds the data to update score
         EditText nameField =  (EditText) findViewById(R.id.Name);
         String store_Name = nameField.getText().toString();
-        option_Checker();//this function will check checkboxes
-        result_Message = store_Name + result_Message + score_Keeper;
-        Context context = getApplicationContext();
-        CharSequence text = result_Message;
-        int duration = Toast.LENGTH_SHORT;
-        // toast is added
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
-        displayMessage(result_Message);
+        EditText nameFieldOfQ4 = (EditText) findViewById(R.id.Ques4);
+        String Ques4Field = nameFieldOfQ4.getText().toString();
+            option_Checker();//this function will check checkboxes
+
+            if (Ques4Field.equals(Ques4Answer)) {
+                score_Keeper = score_Keeper + 1;//this compare the ques 4 amswer with true one which is stored in Ques4Answer
+            }
+            result_Message = store_Name + result_Message + score_Keeper;
+            Context context = getApplicationContext();
+            CharSequence text = result_Message;
+            int duration = Toast.LENGTH_SHORT;
+            // toast is added
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+            displayMessage(result_Message);
+        
     }
     public void option_Checker(){
         // this whole function takes boolean values from ques 1 and updates the score variable

@@ -143,10 +143,11 @@
         </RadioGroup>
         <TextView
             style="@style/Basic_att"
-            android:text="Q: what do you know about FST-7 training style ?"
+            android:text="Q: Who created FST-7 training style ?"
             android:textSize="24dp"
             android:layout_marginTop="24dp"/>
         <EditText
+            android:id="@+id/Ques4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="24dp"
